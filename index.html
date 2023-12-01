@@ -1,96 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer src="/_vercel/insights/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
-    />
-    <title>Vercel HTML Starter</title>
-    <meta
-      name="description"
-      content="High-performance HTML based website template."
-    />
-  </head>
-  <body>
-    <h1>Vercel HTML Starter</h1>
-    <p>
-      This template is a simple, but powerful single
-      <code>index.html</code> file deployed to
-      <a href="https://vercel.com">Vercel</a>. When your site is deployed, all
-      static assets (like HTML, JavaScript, CSS, images, and more) are deployed
-      globally to every
-      <a href="https://vercel.com/docs/concepts/edge-network/overview"
-        >Vercel Edge Network</a
-      >
-      region.
-    </p>
-    <h2>Simple, privacy-friendly analytics</h2>
-    <p>
-      Want to understand your visitor traffic? Vercel Analytics gives you
-      first-party, privacy-friendly traffic analytics for your HTML site. This
-      template is already configured using the following script:
-    </p>
-    <pre><code>&lt;script defer src="/_vercel/insights/script.js"&gt;&lt;/script&gt;</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/analytics">Vercel Analytics</a>.
-    </p>
-    <h2>Integrated with git</h2>
-    <p>
-      Deploying updates to your site is as simple as
-      <code>git push</code> thanks to Vercel's advanced
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-      Support for GitHub, GitLab, Bitbucket is zero-configuration, and with the
-      flexible Vercel CLI and API, you can integrate with any tool possible.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/git">Git Integration</a>.
-    </p>
-    <h2>Fast <code>gzip</code> compression</h2>
-    <p>
-      To help ensure the smallest possible file sizes for your static assets,
-      the Vercel Edge Network compresses files by default using
-      <code>gzip</code>. You can also optionally use
-      <code>brotli</code> compressesion if you prefer.
-    </p>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/edge-network/compression"
-        >compression</a
-      >.
-    </p>
-    <h2>Advanced routing configuration</h2>
-    <p>
-      Vercel gives you a variety of ways to configure the routing of your
-      website. For example, adding redirects, rewrites, or headers to your page.
-      While you can use <code>vercel.json</code> to define these through JSON,
-      you can also express your routing configuration as code using
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-    <p>
-      Middleware runs before the
-      <a href="https://vercel.com/docs/concepts/edge-network/caching"
-        >Vercel Edge Network Cache</a
-      >, so you can configure routing exactly as your application needs. For
-      example, this template uses <code>middleware.js</code> defined in the root
-      of the repository to add additional security headers to the site:
-    </p>
-    <pre><code>referrer-policy: origin-when-cross-origin
-strict-transport-security: max-age=31536000; includeSubDomains; preload
-x-content-type-options: nosniff
-x-dns-prefetch-control: on
-x-frame-options: DENY</code></pre>
-    <p>
-      Learn more about
-      <a href="https://vercel.com/docs/concepts/functions/edge-middleware"
-        >Vercel Edge Middleware</a
-      >.
-    </p>
-  </body>
-</html>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>Gerador de Senha</title><link href=https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/daisyui@1.16.5/dist/full.min.css rel=stylesheet><body class="items-center bg-gray-900 flex h-screen justify-center text-white"><div class="w-full bg-gray-800 max-w-md p-6 rounded-lg shadow-lg"><h1 class="font-bold mb-6 text-3xl text-center">Gerador de Senha</h1><div class="rounded-md bg-gray-700 card p-4 mb-4"><label class="block font-medium mb-2 text-sm"for=length>Comprimento da Senha:</label><input class="w-full py-2 border-gray-300 px-3 focus:border-indigo-500 focus:ring-indigo-500 input"id=length type=number max=30 min=6 value=12></div><div class="gap-4 grid grid-cols-2 mb-4"><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=uppercase type=checkbox> <span class=ml-2>Incluir letras maiúsculas</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=lowercase type=checkbox> <span class=ml-2>Incluir letras minúsculas</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=numbers type=checkbox> <span class=ml-2>Incluir números</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=symbols type=checkbox> <span class=ml-2>Incluir símbolos</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=extraOption1 type=checkbox> <span class=ml-2>Opção Extra 1</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=extraOption2 type=checkbox> <span class=ml-2>Opção Extra 2</span></label></div></div><button class="rounded-md mb-4 bg-indigo-500 hover:bg-indigo-600 px-4 py-2 text-white w-full"id=generateBtn>Gerar Senha</button><div class="rounded-md bg-gray-700 card p-4"><label class="block font-medium mb-2 text-sm"for=passwordResult>Senha Gerada:</label><input class="rounded-md py-2 w-full bg-gray-800 border-gray-300 px-3 shadow-sm"id=passwordResult readonly></div></div><script>document.getElementById('generateBtn').addEventListener('click', function () {
+            const length = document.getElementById('length').value;
+            const uppercase = document.getElementById('uppercase').checked;
+            const lowercase = document.getElementById('lowercase').checked;
+            const numbers = document.getElementById('numbers').checked;
+            const symbols = document.getElementById('symbols').checked;
+            const extraOption1 = document.getElementById('extraOption1').checked;
+            const extraOption2 = document.getElementById('extraOption2').checked;
+
+            const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+            const numberChars = '0123456789';
+            const symbolChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+
+            let chars = '';
+
+            if (uppercase) chars += uppercaseChars;
+            if (lowercase) chars += lowercaseChars;
+            if (numbers) chars += numberChars;
+            if (symbols) chars += symbolChars;
+            if (extraOption1) chars += 'ExemploChars1';
+            if (extraOption2) chars += 'ExemploChars2';
+
+            let password = '';
+
+            for (let i = 0; i < length; i++) {
+                const randomIndex = Math.floor(Math.random() * chars.length);
+                password += chars[randomIndex];
+            }
+
+            document.getElementById('passwordResult').value = password;
+        });</script>
