@@ -1,4 +1,89 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><title>Gerador de Senha</title><link href=https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css rel=stylesheet><link href=https://cdn.jsdelivr.net/npm/daisyui@1.16.5/dist/full.min.css rel=stylesheet><body class="items-center bg-gray-900 flex h-screen justify-center text-white"><div class="w-full bg-gray-800 max-w-md p-6 rounded-lg shadow-lg"><h1 class="font-bold mb-6 text-3xl text-center">Gerador de Senha</h1><div class="rounded-md bg-gray-700 card p-4 mb-4"><label class="block font-medium mb-2 text-sm"for=length>Comprimento da Senha:</label><input class="w-full py-2 border-gray-300 px-3 focus:border-indigo-500 focus:ring-indigo-500 input"id=length type=number max=30 min=6 value=12></div><div class="gap-4 grid grid-cols-2 mb-4"><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=uppercase type=checkbox> <span class=ml-2>Incluir letras maiúsculas</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=lowercase type=checkbox> <span class=ml-2>Incluir letras minúsculas</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=numbers type=checkbox> <span class=ml-2>Incluir números</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=symbols type=checkbox> <span class=ml-2>Incluir símbolos</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=extraOption1 type=checkbox> <span class=ml-2>Opção Extra 1</span></label></div><div class="rounded-md bg-gray-700 card p-4"><label class="items-center inline-flex"><input class="checkbox text-indigo-500"id=extraOption2 type=checkbox> <span class=ml-2>Opção Extra 2</span></label></div></div><button class="rounded-md mb-4 bg-indigo-500 hover:bg-indigo-600 px-4 py-2 text-white w-full"id=generateBtn>Gerar Senha</button><div class="rounded-md bg-gray-700 card p-4"><label class="block font-medium mb-2 text-sm"for=passwordResult>Senha Gerada:</label><input class="rounded-md py-2 w-full bg-gray-800 border-gray-300 px-3 shadow-sm"id=passwordResult readonly></div></div><script>document.getElementById('generateBtn').addEventListener('click', function () {
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Descrição do seu gerador de senha para mecanismos de busca">
+<meta name="keywords" content="palavra-chave1, palavra-chave2, palavra-chave3">
+<meta name="author" content="Nome do autor ou da empresa">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="1 day">	
+<meta name="language" content="Portuguese">
+<meta name="generator" content="Gerador de Senha">
+<meta name="rating" content="general">
+<meta name="distribution" content="global">
+<meta name="coverage" content="Worldwide">
+<meta name="expires" content="never">
+    <title>Gerador de Senha</title>
+    <!-- Adicionando Tailwind CSS e DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@1.16.5/dist/full.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-white flex justify-center items-center h-screen">
+
+    <div class="max-w-md w-full p-6 bg-gray-800 rounded-lg shadow-lg">
+        <h1 class="text-3xl font-bold mb-6 text-center">Gerador de Senha</h1>
+
+        <div class="card bg-gray-700 p-4 rounded-md mb-4">
+            <label for="length" class="block  text-sm font-medium mb-2">Comprimento da Senha:</label>
+            <input type="number" id="length" min="6" max="30" value="12"
+                class="w-full border-gray-300 input  focus:border-indigo-500 focus:ring-indigo-500 px-3 py-2">
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 mb-4">
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="uppercase" class="checkbox text-indigo-500">
+                    <span class="ml-2">Incluir letras maiúsculas</span>
+                </label>
+            </div>
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="lowercase" class="checkbox text-indigo-500">
+                    <span class="ml-2">Incluir letras minúsculas</span>
+                </label>
+            </div>
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="numbers" class="checkbox text-indigo-500">
+                    <span class="ml-2">Incluir números</span>
+                </label>
+            </div>
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="symbols" class="checkbox text-indigo-500">
+                    <span class="ml-2">Incluir símbolos</span>
+                </label>
+            </div>
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="extraOption1" class="checkbox text-indigo-500">
+                    <span class="ml-2">Opção Extra 1</span>
+                </label>
+            </div>
+            <div class="card bg-gray-700 p-4 rounded-md">
+                <label class="inline-flex items-center">
+                    <input type="checkbox" id="extraOption2" class="checkbox text-indigo-500">
+                    <span class="ml-2">Opção Extra 2</span>
+                </label>
+            </div>
+        </div>
+
+        <button id="generateBtn"
+            class="w-full bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded-md mb-4">Gerar
+            Senha</button>
+
+        <div class="card bg-gray-700 p-4 rounded-md">
+            <label for="passwordResult" class="block text-sm font-medium mb-2">Senha Gerada:</label>
+            <input type="text" id="passwordResult" readonly
+                class="w-full border-gray-300 rounded-md shadow-sm px-3 py-2 bg-gray-800">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', function () {
             const length = document.getElementById('length').value;
             const uppercase = document.getElementById('uppercase').checked;
             const lowercase = document.getElementById('lowercase').checked;
@@ -29,4 +114,35 @@
             }
 
             document.getElementById('passwordResult').value = password;
-        });</script>
+        });
+    </script>
+    <script>
+        document.getElementById('generateMultipleBtn').addEventListener('click', function () {
+            const numberOfPasswords = 5; // Altere conforme desejado
+    
+            let passwords = [];
+    
+            for (let j = 0; j < numberOfPasswords; j++) {
+                let password = '';
+    
+                for (let i = 0; i < length; i++) {
+                    const randomIndex = Math.floor(Math.random() * chars.length);
+                    password += chars[randomIndex];
+                }
+    
+                passwords.push(password);
+            }
+    
+            const textToSave = passwords.join('\n');
+    
+            const hiddenElement = document.createElement('a');
+            hiddenElement.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave);
+            hiddenElement.target = '_blank';
+            hiddenElement.download = 'senhas.txt';
+            hiddenElement.click();
+        });
+    </script>
+    
+</body>
+
+</html>
