@@ -1,5 +1,3 @@
-markdown
-Copy code
 # Gerador de Senha em HTML
 
 Este é um projeto simples de gerador de senhas em HTML, que permite aos usuários gerar senhas aleatórias com base em suas preferências.
