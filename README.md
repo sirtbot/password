@@ -39,3 +39,5 @@ Para qualquer dúvida ou sugestões, entre em contato no Discord: `sirtbot`.
 ---
 
 *Nota: Este é um projeto simples e pode ser expandido e aprimorado conforme necessário. Sinta-se à vontade para contribuir e melhorar o código.*
+
+EN: PASSWORD GENERATOR
